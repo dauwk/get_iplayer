@@ -1,0 +1,6 @@
+/usr/local/bin/rtmpdump-2.4  \
+"-rrtmpe://cp72511.edgefcs.net/ondemand?auth=eaEa1djbxakcacYahdpdKaQdidpcrchcraFahbnaWbecUd7byaOc6cabhcydWbCbmco-bqIzBC-eS-7Av2FAnlvtwp&aifp=v002&slist=production/" \
+"-Whttp://www.itv.com/mediaplayer/ITVMediaPlayer.swf?v=11.20.654" \
+"-ymp4:production/priority/rtmpecatchup/1200/56/1-0694-7965-001/1-0694-7965-001_coronation-street-(series-53)-2012_tx280912_itv1200_16x9-reg.mp4" \
+"-o/Users/john/tv/Coronation Street/Coronation Street - 28-09-2012 - Episode 196.partial.flv" \
+-v

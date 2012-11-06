@@ -1,0 +1,68 @@
+TABLE members:
+id_member = 1
+firstname = 'John'
+contacts (BLOB) = '4,6,7,2,5'
+
+TABLE customer:
+id_member = 1
+name = 'Visa'
+email = 'john@visa.com,jill@visa.com,tom@barclaycard.com'
+
+SELECT name from customer WHERE id_member IN ( SELECT email FROM customer WHERE id_member = 1 );
+
+
+MySQL does not include a function to split a delimited string. Although separated data would normally be split into separate fields within a relation data, spliting such can be useful either during initial data load/validation or where such data is held in a text field.
+
+The following formula can be used to extract the Nth item in a delimited list, in this case the 3rd item "ccccc" in the example comma separated list.
+
+select replace(substring(substring_index('aaa,bbbb,ccccc', ',', 3), length(substring_index('aaa,bbbb,ccccc', ',', 3 - 1)) + 1), ',', '') ITEM3
+
+The above formula does not need the first item to be handled as a special case and returns empty strings correctly when the item count is less than the position requested.
+
+More on this and related matters can be found at http://www.kanolife.com/escape/2006/03/mysql-string-splitter.html
+
+MySQL doesn't have a split string function so you have to do work arounds. You can do anything with the data once you split it using one of the methods listed on the answer page above.
+
+You can loop over that custom function and break when it returns empty, you'll have to play and learn some syntax (or at least I would) but the syntax for a FOR loop in mysql is here: http://www.roseindia.net/sql/mysql-example/for.shtml
+
+You can iterate over it, incrementing the position in the function below:
+
+CREATE FUNCTION SPLIT_STR(
+  x VARCHAR(255),
+  delim VARCHAR(12),
+  pos INT
+)
+RETURNS VARCHAR(255)
+RETURN REPLACE(SUBSTRING(SUBSTRING_INDEX(x, delim, pos),
+       LENGTH(SUBSTRING_INDEX(x, delim, pos -1)) + 1),
+       delim, '');
+Which should return '' if no match is found, so break the loop if no match is found. This will allow you to with only mysql parse over the split string and run the insert queries into a temp table. But man why not just use a scripting language like php for that kind of work? :(
+
+Code for loop syntax:
+
+DELIMITER $$  
+
+CREATE PROCEDURE ABC(fullstr)
+
+   BEGIN
+      DECLARE a INT Default 0 ;
+      simple_loop: LOOP
+         SET a=a+1;
+         SET str=SPLIT_STR(fullstr,"|",a);
+         select str;
+         IF str='' THEN
+            LEAVE simple_loop;
+         END IF;
+         #Do Inserts into temp table here with str going into the row
+         insert into my_temp_table values (str);
+   END LOOP simple_loop;
+END $$
+Note this code isn't tested but I hope it helps.
+
+share|improve this answer
+edited Aug 6 at 20:32
+
+answered Aug 6 at 20:14
+
+Wolfe
+45512

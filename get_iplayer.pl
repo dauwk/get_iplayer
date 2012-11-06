@@ -23,6 +23,8 @@
 # License: GPLv3 (see LICENSE.txt)
 #
 #
+print "Invoked by  \n";
+foreach (@ARGV) { print "$_\n" }
 package main;
 my $version = 2.82;
 #
@@ -130,8 +132,8 @@ my $opt_format = {
 	pidrecursive	=> [ 1, "pidrecursive|pid-recursive!", 'Recording', '--pid-recursive', "When used with --pid record all the embedded pids if the pid is a series or brand pid."],
 	proxy		=> [ 0, "proxy|p=s", 'Recording', '--proxy, -p <url>', "Web proxy URL e.g. 'http://USERNAME:PASSWORD\@SERVER:PORT' or 'http://SERVER:PORT'"],
 	raw		=> [ 0, "raw!", 'Recording', '--raw', "Don't transcode or change the recording/stream in any way (i.e. radio/realaudio, rtmp/flv)"],
-	start		=> [ 1, "start=s", 'Recording', '--start <secs>', "Recording/streaming start offset (rtmp and realaudio only)"],
-	stop		=> [ 1, "stop=s", 'Recording', '--stop <secs>', "Recording/streaming stop offset (can be used to limit live rtmp recording length) rtmp and realaudio only"],
+	start		=> [ 1, "start=s", 'Recording', '--start <secs|hh:mm:ss>', "Recording/streaming start offset (rtmp and realaudio only)"],
+	stop		=> [ 1, "stop=s", 'Recording', '--stop <secs|hh:mm:ss>', "Recording/streaming stop offset (can be used to limit live rtmp recording length) rtmp and realaudio only"],
 	suboffset	=> [ 1, "suboffset=n", 'Recording', '--suboffset <offset>', "Offset the subtitle timestamps by the specified number of milliseconds"],
 	subtitles	=> [ 2, "subtitles|subs!", 'Recording', '--subtitles', "Download subtitles into srt/SubRip format if available and supported"],
 	subsonly	=> [ 1, "subtitlesonly|subsonly|subtitles-only|subs-only!", 'Recording', '--subtitles-only', "Only download the subtitles, not the programme"],
@@ -245,6 +247,7 @@ my $opt_format = {
 	mplayer		=> [ 1, "mplayer=s", 'External Program', '--mplayer <path>', "Location of mplayer binary"],
 
 	# Tagging
+	noartwork => [ 1, "noartwork|no-artwork!", 'Tagging', '--no-artwork', "Do not embed thumbnail image in output file.  All other metadata values will be written."],
 	notag => [ 1, "notag|no-tag!", 'Tagging', '--no-tag', "Do not tag downloaded programmes"],
 	tag_cnid => [ 1, "tagcnid|tag-cnid!", 'Tagging', '--tag-cnid', "AtomicParsley supports --cnID argument to add catalog ID used for combining HD and SD versions in iTunes"],
 	tag_fulltitle => [ 1, "tagfulltitle|tag-fulltitle!", 'Tagging', '--tag-fulltitle', "Use complete title (including series) instead of shorter episode title"],
@@ -532,6 +535,13 @@ if ( $opt->{webrequest} ) {
 	# Remove this option now we've processed it
 	delete $opt->{webrequest};
 	delete $opt_cmdline->{webrequest};
+}
+
+# process --start and --stop if necessary
+foreach ('start', 'stop') {
+	if ($opt->{$_} && $opt->{$_} =~ /(\d\d):(\d\d)(:(\d\d))?/) {
+		$opt->{$_} = $1 * 3600 +  $2 * 60 + $4;
+	}
 }
 
 # Add --search option to @search_args if specified
@@ -2781,12 +2791,16 @@ sub StringUtils::sanitize_path {
 
 	# Replace backslashes with _ regardless
 	$string =~ s/\\/_/g;
+	# Replace :'s with -'s
+	$string =~ s/:/ -/g;
 	# Sanitize by default
 	$string =~ s/\s+/_/g if (! $opt->{whitespace}) && (! $allow_fwd_slash);
 	$string =~ s/[^\w_\-\.\/\s]//gi if ! $opt->{whitespace};
 	$string =~ s/[\|\\\?\*\<\"\:\>\+\[\]\/]//gi if $opt->{fatfilename};
 	# Truncate multiple '_'
 	$string =~ s/_+/_/g;
+    # Don't allow showname to start with '.'
+    $string =~ s/^\.{1,3}//g;
 	return $string;
 }
 
@@ -4137,9 +4151,9 @@ sub download_retry_loop {
 		my $retcode = 1;
 		main::logger "DEBUG: Trying version '$version'\n" if $opt->{debug};
 		if ( $prog->{verpids}->{$version} ) {
-			main::logger "INFO: Checking existence of $version version\n";
+			main::logger "INFOJO: Checking existence of $version version\n";
 			$prog->{version} = $version;
-			main::logger "INFO: Version = $prog->{version}\n" if $opt->{verbose};
+			main::logger "INFOJO: Version = $prog->{version}\n" if $opt->{verbose};
 
 			# Try to get stream data for this version if not already populated
 			if ( not defined $prog->{streams}->{$version} ) {
@@ -4150,8 +4164,10 @@ sub download_retry_loop {
 			# record prog depending on the prog type
 
 			# only use modes that exist
+
 			my @modes;
-			main::logger "INFOJO: only use modes that exist\n" if $opt->{verbose};
+			main::logger "INFOJO: modes will be tried for version $version\n";
+
 			my @available_modes = sort keys %{ $prog->{streams}->{$version} };
 			for my $modename ( split /,/, $modelist ) {
 				# find all numbered modes starting with this modename
@@ -4310,7 +4326,7 @@ sub tag_file {
 	# return if file does not exist
 	return if ! -f $prog->{filename};
 	# download thumbnail if necessary
-	$prog->download_thumbnail if ( ! -f $prog->{thumbfile} );
+	$prog->download_thumbnail if ( ! -f $prog->{thumbfile} && ! $opt->{noartwork} );
 	# create metadata
 	my $meta = $prog->tag_metadata;
 	# tag file
@@ -5034,7 +5050,8 @@ sub get_verpids {
 		# Live TV
 		if ( m{\s+simulcast="true"} ) {
 			$version = 'default';
-			$verpid = "http://www.bbc.co.uk/emp/simulcast/".$1.".xml" if m{\s+live="true"\s+identifier="(.+?)"};
+			# <item kind="programme" live="true" liverewind="true" identifier="bbc_two_england" group="bbc_two_england" simulcast="true" availability_class="liverewind">
+			$verpid = "http://www.bbc.co.uk/emp/simulcast/".$2.".xml" if m{\s+live="true"\s+(liverewind="true"\s+)?identifier="(.+?)"};
 			main::logger "INFO: Using Live TV: $verpid\n" if $opt->{verbose} && $verpid;
 
 		# Live/Non-live EMP tv/radio XML URL
@@ -9623,7 +9640,7 @@ sub tag_file_id3 {
 			$mp3->select_id3v2_frame_by_descr('TGID', $tags->{podcastGUID});
 		}
 		# add artwork if available
-		if ( -f $meta->{thumbfile} ) {
+		if ( -f $meta->{thumbfile}  && ! $opt->{noartwork} ) {
 			my $data;
 			open(THUMB, $meta->{thumbfile});
 			binmode(THUMB);
@@ -9768,7 +9785,7 @@ sub tag_file_mp4 {
 			);
 		}
 		# add artwork if available
-		push @cmd, ( '--artwork', $meta->{thumbfile} ) if -f $meta->{thumbfile};
+		push @cmd, ( '--artwork', $meta->{thumbfile} ) if ( -f $meta->{thumbfile} && ! $opt->{noartwork} );
 		# run atomicparsley command
 		if ( main::run_cmd( 'STDERR', @cmd ) ) {
 			main::logger "WARNING: Failed to tag \U$meta->{ext}\E file\n";

@@ -1,0 +1,159 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <SOAP-ENV:Body>
+        <tem:GetPlaylist xmlns:tem="http://tempuri.org/" xmlns:itv="http://schemas.datacontract.org/2004/07/Itv.BB.Mercury.Common.Types" xmlns:com="http://schemas.itv.com/2009/05/Common">
+            <tem:request>
+                <itv:RequestGuid>FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF</itv:RequestGuid>
+                <itv:Vodcrid>
+                    <com:Id>325363</com:Id>
+                    <com:Partition>itv.com</com:Partition>
+                </itv:Vodcrid>
+            </tem:request>
+            <tem:userInfo>
+                <itv:GeoLocationToken>
+                    <itv:Token/>
+                </itv:GeoLocationToken>
+                <itv:RevenueScienceValue>scc=true; svisit=1; sc4=Other</itv:RevenueScienceValue>
+            </tem:userInfo>
+            <tem:siteInfo>
+                <itv:Area>ITVPLAYER.VIDEO</itv:Area>
+                <itv:Platform>DotCom</itv:Platform>
+                <itv:Site>ItvCom</itv:Site>
+            </tem:siteInfo>
+        </tem:GetPlaylist>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+   <s:Body>
+      <GetPlaylistResponse xmlns="http://tempuri.org/">
+         <GetPlaylistResult>
+            <Playlist xmlns="">
+               <ProductionId>1/0694/7965#001</ProductionId>
+               <SessionId>0</SessionId>
+               <Ticket/>
+               <AlcatrazId/>
+               <Vodcrid>crid://itv.com/325363</Vodcrid>
+               <ExpiryDate>2012-10-28T23:59:00</ExpiryDate>
+               <VideoType>CATCHUP</VideoType>
+               <GuidanceText/>
+               <ProgrammeTitle>Coronation Street</ProgrammeTitle>
+               <TransmissionDate>28 September 2012</TransmissionDate>
+               <TransmissionTime>20:30</TransmissionTime>
+               <Duration>00:22:17:720</Duration>
+               <EpisodeTitle>28/09/2012</EpisodeTitle>
+               <EpisodeNumber>196</EpisodeNumber>
+               <Sting>
+                  <Video>
+                     <MediaFiles base="rtmpe://cp72511.edgefcs.net/ondemand?auth=eaEcRbIb9dNaObycxcWd1dfblbgaDd6bNbvdkc9d0d1cOdXcVcZdCbCcKascDaDdMd2-bqIAlm-eS-7yq2DDwjvsAr&amp;aifp=v002&amp;slist=production/">
+                        <MediaFile delivery="Streaming" bitrate="0">
+                           <URL>mp4:production/stings/IP_ProjectMercury_ITV1sting_Ribbons_600_16-9.mp4</URL>
+                        </MediaFile>
+                     </MediaFiles>
+                  </Video>
+               </Sting>
+               <Dog showDuringAd="false">
+                  <URL>http://www.itv.com/_app/img/mercury/ITV-bugs-ITV1.png</URL>
+               </Dog>
+               <PosterFrame>
+                  <URL>http://mercury.itv.com/DotCom/episode/325363/image.jpg?w=480&amp;h=272</URL>
+               </PosterFrame>
+               <VideoEntries>
+                  <Video timecode="00:00:00:000" duration="00:22:17:720" rendition-offset="00:00:00:000">
+                     <ClosedCaptioningURIs>
+                        <URL>http://subtitles.secure.content.itv.com/CATCHUP/dbce6d68/fa86/4e4f/9689/e8032e1e4328/1-0694-7965-001_CoronationStreet_TX280912.xml?__gda__=1351204568_e271d7347a06d364db4be1009ec37cf2&amp;fileExt=.xml</URL>
+                     </ClosedCaptioningURIs>
+                     <MediaFiles base="rtmpe://cp72511.edgefcs.net/ondemand?auth=eaEcRbIb9dNaObycxcWd1dfblbgaDd6bNbvdkc9d0d1cOdXcVcZdCbCcKascDaDdMd2-bqIAlm-eS-7yq2DDwjvsAr&amp;aifp=v002&amp;slist=production/">
+                        <MediaFile delivery="Streaming" bitrate="400000" base="" tkn="">
+                           <URL>mp4:production/priority/rtmpecatchup/400/56/1-0694-7965-001/1-0694-7965-001_coronation-street-(series-53)-2012_tx280912_itv400_16x9-reg.mp4</URL>
+                        </MediaFile>
+                        <MediaFile delivery="Streaming" bitrate="600000" base="" tkn="">
+                           <URL>mp4:production/priority/rtmpecatchup/600/56/1-0694-7965-001/1-0694-7965-001_coronation-street-(series-53)-2012_tx280912_itv600_16x9-reg.mp4</URL>
+                        </MediaFile>
+                        <MediaFile delivery="Streaming" bitrate="800000" base="" tkn="">
+                           <URL>mp4:production/priority/rtmpecatchup/800/56/1-0694-7965-001/1-0694-7965-001_coronation-street-(series-53)-2012_tx280912_itv800_16x9-reg.mp4</URL>
+                        </MediaFile>
+                        <MediaFile delivery="Streaming" bitrate="1200000" base="" tkn="">
+                           <URL>mp4:production/priority/rtmpecatchup/1200/56/1-0694-7965-001/1-0694-7965-001_coronation-street-(series-53)-2012_tx280912_itv1200_16x9-reg.mp4</URL>
+                        </MediaFile>
+                     </MediaFiles>
+                     <TrackingEvents/>
+                  </Video>
+               </VideoEntries>
+               <ContentBreaks>
+                  <ContentBreak timecode="00:00:00:000">
+                     <Action>
+                        <URL>http://tom.itv.com/itv/hserver/size=video/area=itvplayer.video/generic=ffffffff-ffff-ffff-ffff-ffffffffffff/rs=scc.true..svisit.1..sc4.other/site=itv/progid=itv.com.325363/proggenre=drama.and.soaps/genre=soa.a2.a3.aa.ad.h5.ha.hc.hw.w3.wa.wo/progname=coronation.street/series=coronation.street/seriesid=325363/eptitle=28.09.2012/brandid=325363/source=catchup/tdur=1337/rstrct=none/chanbrand=itv1/pm=free/us=ano/viewid=0.ffffffff-ffff-ffff-ffff-ffffffffffff/breaknum=0/adpos=1/random=6373703250/</URL>
+                     </Action>
+                     <Action>
+                        <URL>http://tom.itv.com/itv/hserver/size=video/area=itvplayer.video/generic=ffffffff-ffff-ffff-ffff-ffffffffffff/rs=scc.true..svisit.1..sc4.other/site=itv/progid=itv.com.325363/proggenre=drama.and.soaps/genre=soa.a2.a3.aa.ad.h5.ha.hc.hw.w3.wa.wo/progname=coronation.street/series=coronation.street/seriesid=325363/eptitle=28.09.2012/brandid=325363/source=catchup/tdur=1337/rstrct=none/chanbrand=itv1/pm=free/us=ano/viewid=0.ffffffff-ffff-ffff-ffff-ffffffffffff/breaknum=0/adpos=2/random=1408222636/</URL>
+                     </Action>
+                     <Action>
+                        <URL>http://tom.itv.com/itv/hserver/size=video/area=itvplayer.video/generic=ffffffff-ffff-ffff-ffff-ffffffffffff/rs=scc.true..svisit.1..sc4.other/site=itv/progid=itv.com.325363/proggenre=drama.and.soaps/genre=soa.a2.a3.aa.ad.h5.ha.hc.hw.w3.wa.wo/progname=coronation.street/series=coronation.street/seriesid=325363/eptitle=28.09.2012/brandid=325363/source=catchup/tdur=1337/rstrct=none/chanbrand=itv1/pm=free/us=ano/viewid=0.ffffffff-ffff-ffff-ffff-ffffffffffff/breaknum=0/adpos=last/random=1014449931/</URL>
+                     </Action>
+                  </ContentBreak>
+                  <ContentBreak timecode="00:11:21:321">
+                     <Action>
+                        <URL>http://tom.itv.com/itv/hserver/size=video/area=itvplayer.video/generic=ffffffff-ffff-ffff-ffff-ffffffffffff/rs=scc.true..svisit.1..sc4.other/site=itv/progid=itv.com.325363/proggenre=drama.and.soaps/genre=soa.a2.a3.aa.ad.h5.ha.hc.hw.w3.wa.wo/progname=coronation.street/series=coronation.street/seriesid=325363/eptitle=28.09.2012/brandid=325363/source=catchup/tdur=1337/rstrct=none/chanbrand=itv1/pm=free/us=ano/viewid=1.ffffffff-ffff-ffff-ffff-ffffffffffff/breaknum=1/adpos=1/random=2135257124/</URL>
+                     </Action>
+                     <Action>
+                        <URL>http://tom.itv.com/itv/hserver/size=video/area=itvplayer.video/generic=ffffffff-ffff-ffff-ffff-ffffffffffff/rs=scc.true..svisit.1..sc4.other/site=itv/progid=itv.com.325363/proggenre=drama.and.soaps/genre=soa.a2.a3.aa.ad.h5.ha.hc.hw.w3.wa.wo/progname=coronation.street/series=coronation.street/seriesid=325363/eptitle=28.09.2012/brandid=325363/source=catchup/tdur=1337/rstrct=none/chanbrand=itv1/pm=free/us=ano/viewid=1.ffffffff-ffff-ffff-ffff-ffffffffffff/breaknum=1/adpos=2/random=1095255953/</URL>
+                     </Action>
+                     <Action>
+                        <URL>http://tom.itv.com/itv/hserver/size=video/area=itvplayer.video/generic=ffffffff-ffff-ffff-ffff-ffffffffffff/rs=scc.true..svisit.1..sc4.other/site=itv/progid=itv.com.325363/proggenre=drama.and.soaps/genre=soa.a2.a3.aa.ad.h5.ha.hc.hw.w3.wa.wo/progname=coronation.street/series=coronation.street/seriesid=325363/eptitle=28.09.2012/brandid=325363/source=catchup/tdur=1337/rstrct=none/chanbrand=itv1/pm=free/us=ano/viewid=1.ffffffff-ffff-ffff-ffff-ffffffffffff/breaknum=1/adpos=3/random=1744181790/</URL>
+                     </Action>
+                     <Action>
+                        <URL>http://tom.itv.com/itv/hserver/size=video/area=itvplayer.video/generic=ffffffff-ffff-ffff-ffff-ffffffffffff/rs=scc.true..svisit.1..sc4.other/site=itv/progid=itv.com.325363/proggenre=drama.and.soaps/genre=soa.a2.a3.aa.ad.h5.ha.hc.hw.w3.wa.wo/progname=coronation.street/series=coronation.street/seriesid=325363/eptitle=28.09.2012/brandid=325363/source=catchup/tdur=1337/rstrct=none/chanbrand=itv1/pm=free/us=ano/viewid=1.ffffffff-ffff-ffff-ffff-ffffffffffff/breaknum=1/adpos=4/random=6528093000/</URL>
+                     </Action>
+                     <Action>
+                        <URL>http://tom.itv.com/itv/hserver/size=video/area=itvplayer.video/generic=ffffffff-ffff-ffff-ffff-ffffffffffff/rs=scc.true..svisit.1..sc4.other/site=itv/progid=itv.com.325363/proggenre=drama.and.soaps/genre=soa.a2.a3.aa.ad.h5.ha.hc.hw.w3.wa.wo/progname=coronation.street/series=coronation.street/seriesid=325363/eptitle=28.09.2012/brandid=325363/source=catchup/tdur=1337/rstrct=none/chanbrand=itv1/pm=free/us=ano/viewid=1.ffffffff-ffff-ffff-ffff-ffffffffffff/breaknum=1/adpos=5/random=1734400548/</URL>
+                     </Action>
+                     <Action>
+                        <URL>http://tom.itv.com/itv/hserver/size=video/area=itvplayer.video/generic=ffffffff-ffff-ffff-ffff-ffffffffffff/rs=scc.true..svisit.1..sc4.other/site=itv/progid=itv.com.325363/proggenre=drama.and.soaps/genre=soa.a2.a3.aa.ad.h5.ha.hc.hw.w3.wa.wo/progname=coronation.street/series=coronation.street/seriesid=325363/eptitle=28.09.2012/brandid=325363/source=catchup/tdur=1337/rstrct=none/chanbrand=itv1/pm=free/us=ano/viewid=1.ffffffff-ffff-ffff-ffff-ffffffffffff/breaknum=1/adpos=last/random=1181058623/</URL>
+                     </Action>
+                  </ContentBreak>
+                  <ContentBreak timecode="00:22:17:720">
+                     <Action>
+                        <URL>http://tom.itv.com/itv/hserver/size=video/area=itvplayer.video/generic=ffffffff-ffff-ffff-ffff-ffffffffffff/rs=scc.true..svisit.1..sc4.other/site=itv/progid=itv.com.325363/proggenre=drama.and.soaps/genre=soa.a2.a3.aa.ad.h5.ha.hc.hw.w3.wa.wo/progname=coronation.street/series=coronation.street/seriesid=325363/eptitle=28.09.2012/brandid=325363/source=catchup/tdur=1337/rstrct=none/chanbrand=itv1/pm=free/us=ano/viewid=end.ffffffff-ffff-ffff-ffff-ffffffffffff/breaknum=end/adpos=1/random=4428322600/</URL>
+                     </Action>
+                     <Action>
+                        <URL>http://tom.itv.com/itv/hserver/size=video/area=itvplayer.video/generic=ffffffff-ffff-ffff-ffff-ffffffffffff/rs=scc.true..svisit.1..sc4.other/site=itv/progid=itv.com.325363/proggenre=drama.and.soaps/genre=soa.a2.a3.aa.ad.h5.ha.hc.hw.w3.wa.wo/progname=coronation.street/series=coronation.street/seriesid=325363/eptitle=28.09.2012/brandid=325363/source=catchup/tdur=1337/rstrct=none/chanbrand=itv1/pm=free/us=ano/viewid=end.ffffffff-ffff-ffff-ffff-ffffffffffff/breaknum=end/adpos=last/random=3802871530/</URL>
+                     </Action>
+                  </ContentBreak>
+               </ContentBreaks>
+               <Notifications>
+                  <Notification timecode="00:00:00:200">
+                     <Tracking event="Time">
+                        <URL>javascript:Omniture_Play("crid://itv.com/325363", "ffffffff-ffff-ffff-ffff-ffffffffffff", "Coronation Street");</URL>
+                     </Tracking>
+                  </Notification>
+                  <Notification timecode="00:00:00:200">
+                     <Tracking event="Time">
+                        <URL>http://mercury.itv.com/ContentTrackingCall.aspx?vodcrid=crid://itv.com/325363&amp;guid=ffffffff-ffff-ffff-ffff-ffffffffffff&amp;part=1&amp;client=ItvCom</URL>
+                     </Tracking>
+                  </Notification>
+                  <Notification timecode="00:11:21:521">
+                     <Tracking event="Time">
+                        <URL>http://mercury.itv.com/ContentTrackingCall.aspx?vodcrid=crid://itv.com/325363&amp;guid=ffffffff-ffff-ffff-ffff-ffffffffffff&amp;part=2&amp;client=ItvCom</URL>
+                     </Tracking>
+                  </Notification>
+               </Notifications>
+               <TrackingEvents>
+                  <Tracking event="PlaylistLoaded"/>
+                  <Tracking event="AttemptPlay">
+                     <URL>javascript:CallBehaviourModulePlayer("crid://itv.com/325363", "Video");</URL>
+                     <URL>http://mercury.itv.com/ContentTrackingCall.aspx?vodcrid=crid://itv.com/325363&amp;guid=ffffffff-ffff-ffff-ffff-ffffffffffff&amp;part=0&amp;client=ItvCom</URL>
+                  </Tracking>
+                  <Tracking event="Pause"/>
+                  <Tracking event="Resume"/>
+                  <Tracking event="EnterFullscreen"/>
+                  <Tracking event="ExitFullscreeen"/>
+                  <Tracking event="Seek"/>
+                  <Tracking event="ErrorOccured"/>
+               </TrackingEvents>
+            </Playlist>
+         </GetPlaylistResult>
+      </GetPlaylistResponse>
+   </s:Body>
+</s:Envelope>

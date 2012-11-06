@@ -1,5 +1,5 @@
 /* Rexx */
-trace r
+trace o
 say getproxy()
 
 
@@ -7,20 +7,23 @@ say getproxy()
 parse arg show .
 if show="" then show="news"
 
-x = './get_iplayer --force '
+x = './get_iplayer.pl --force '
 /*
  --subdir, -s                     Put Recorded files into Programme name subdirectory
  --subdir-format <format>         The format to be used for the subdirectory naming using formatting fields. e.g. '<nameshort>-<seriesnum>'
 */
+x = x || ' --verbose '
+/* x = x || ' --showopts ' */
 x = x || ' --subdir '
 x = x || ' --subdir-format="<nameshort><seriesnum>"'
 x = x || ' --type=itv '
 x = x || ' --output="/Users/john/tv" '
 x = x || ' --subtitles '
-x = x || ' --proxy http://' || line 
+x = x || ' --proxy="http://' || line ||'"'  
 x = x || ' --modes=best '
 x = x || ' --flvstreamer="/Users/john/get_iplayer/flvstreamer" '
-x = x || '"' || show || '" --get'
+x = x || '"' || show || '"'
+x = x || ' --get '
 
 x 
 exit 

@@ -1,0 +1,1 @@
+./rtmpdump-2.4 --protocol 2 --host "cp72511.edgefcs.net" -a "ondemand?auth=eaEcPdUdjd3cOdab2a.aNdDbGcydscZdwaF dQdTcVagamaIcjcFcbdIahcJcaacbhaA-booA7k-eS-5As4LDslvuwq&aifp=v002&slist=production/" -y "mp4:production/stings/IP_ProjectMercury_ITV1sting_Ribbons_600_16-9.mp4" -o output.flv --verbose --resume

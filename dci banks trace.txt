@@ -1,0 +1,267 @@
+Get iPlayer Automator Initialized.
+
+AppController: Installing/Updating Get_iPlayer Plugins...
+Updating Program Index Feeds from Server...
+AppController: Index was Up-To-Date.
+Updating Program Index Feeds from Server...
+    Retrieving TV index feeds.
+    Retrieving ITV index feeds.
+    Retrieving CH4 index feeds.
+AppController: Index Updated.
+
+AppController: Starting Downloads
+
+
+Downloading Show 1/1:
+
+ITV Download (ID=100109): Downloading DCI Banks - Wed 31 Oct 2012
+INFO: Preparing Request for Auth Info
+INFO: Requesting Metadata.
+DEBUG: Metadata Response: <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Body><GetPlaylistResponse xmlns="http://tempuri.org/"><GetPlaylistResult><Playlist xmlns="">
+  <ProductionId>1/9089/0012#002</ProductionId>
+  <SessionId>0</SessionId>
+  <Ticket></Ticket>
+  <AlcatrazId></AlcatrazId>
+  <Vodcrid>crid://itv.com/327027</Vodcrid>
+  <ExpiryDate>2012-11-30T23:59:59</ExpiryDate>
+  <VideoType>CATCHUP</VideoType>
+  <GuidanceText>Contains some scenes of violence.</GuidanceText>
+  <ProgrammeTitle>DCI Banks</ProgrammeTitle>
+  <TransmissionDate>31 October 2012</TransmissionDate>
+  <TransmissionTime>21:00</TransmissionTime>
+  <Duration>00:45:43:160</Duration>
+  <EpisodeTitle>Dry Bones That Dream (Part 2)</EpisodeTitle>
+  <EpisodeNumber>4</EpisodeNumber>
+  <Sting>
+    <Video>
+      <MediaFiles base="rtmpe://cp72511.edgefcs.net/ondemand?auth=eaEd7dEd8axdXaKbsb0cidRa_bSdYd7anbLdlcBaqbqcLcXb3d1bla2d_aScRbNd4bW-bqKC4w-eS-dAm4CAqmErCq&amp;aifp=v002&amp;slist=production/">
+        <MediaFile delivery="Streaming" bitrate="0">
+          <URL><![CDATA[mp4:production/stings/IP_ProjectMercury_ITV1sting_Ribbons_600_16-9.mp4]]></URL>
+        </MediaFile>
+      </MediaFiles>
+    </Video>
+  </Sting>
+  <Dog showDuringAd="false">
+    <URL><![CDATA[http://www.itv.com/_app/img/mercury/ITV-bugs-ITV1.png]]></URL>
+  </Dog>
+  <PosterFrame>
+    <URL><![CDATA[http://mercury.itv.com/DotCom/episode/327027/image.jpg?w=480&h=272]]></URL>
+  </PosterFrame>
+  <VideoEntries>
+    <Video timecode="00:00:00:000" duration="00:45:43:160" rendition-offset="00:00:00:000">
+      <ClosedCaptioningURIs>
+        <URL><![CDATA[http://subtitles.secure.content.itv.com/CATCHUP/b2580098/74cb/4128/a53a/e13fb458dded/1-9089-0012-002_DCIBanks-Aftermath_TX311012.xml?__gda__=1351739938_daf2b652777d76a62ee571086754f84a&fileExt=.xml]]></URL>
+      </ClosedCaptioningURIs>
+      <MediaFiles base="rtmpe://cp72511.edgefcs.net/ondemand?auth=eaEd7dEd8axdXaKbsb0cidRa_bSdYd7anbLdlcBaqbqcLcXb3d1bla2d_aScRbNd4bW-bqKC4w-eS-dAm4CAqmErCq&amp;aifp=v002&amp;slist=production/">
+        <MediaFile delivery="Streaming" bitrate="400000" base="" tkn="">
+          <URL><![CDATA[mp4:production/priority/rtmpecatchup/400/9B/1-9089-0012-002/1-9089-0012-002_dci-banks-(series-2)_tx311012_itv400_16x9-reg.mp4]]></URL>
+        </MediaFile>
+        <MediaFile delivery="Streaming" bitrate="600000" base="" tkn="">
+          <URL><![CDATA[mp4:production/priority/rtmpecatchup/600/9B/1-9089-0012-002/1-9089-0012-002_dci-banks-(series-2)_tx311012_itv600_16x9-reg.mp4]]></URL>
+        </MediaFile>
+        <MediaFile delivery="Streaming" bitrate="800000" base="" tkn="">
+          <URL><![CDATA[mp4:production/priority/rtmpecatchup/800/9B/1-9089-0012-002/1-9089-0012-002_dci-banks-(series-2)_tx311012_itv800_16x9-reg.mp4]]></URL>
+        </MediaFile>
+        <MediaFile delivery="Streaming" bitrate="1200000" base="" tkn="">
+          <URL><![CDATA[mp4:production/priority/rtmpecatchup/1200/9B/1-9089-0012-002/1-9089-0012-002_dci-banks-(series-2)_tx311012_itv1200_16x9-reg.mp4]]></URL>
+        </MediaFile>
+      </MediaFiles>
+      <TrackingEvents/>
+    </Video>
+  </VideoEntries>
+  <ContentBreaks>
+    <ContentBreak timecode="00:00:00:000">
+      <Action>
+        <URL><![CDATA[http://tom.itv.com/itv/hserver/size=video/area=itvplayer.video/generic=ffffffff-ffff-ffff-ffff-ffffffffffff/rs=scc.true..svisit.1..sc4.other/site=itv/progid=itv.com.327027/proggenre=drama.and.soaps/genre=dra.aa.ha.hw.wa.wo/progname=dci.banks/series=dci.banks/seriesid=327027/eptitle=dry.bones.that.dream..part.2/brandid=327027/source=catchup/tdur=2743/rstrct=none/chanbrand=itv1/pm=free/us=ano/viewid=0.ffffffff-ffff-ffff-ffff-ffffffffffff/breaknum=0/adpos=1/random=1749921023/]]></URL>
+      </Action>
+      <Action>
+        <URL><![CDATA[http://tom.itv.com/itv/hserver/size=video/area=itvplayer.video/generic=ffffffff-ffff-ffff-ffff-ffffffffffff/rs=scc.true..svisit.1..sc4.other/site=itv/progid=itv.com.327027/proggenre=drama.and.soaps/genre=dra.aa.ha.hw.wa.wo/progname=dci.banks/series=dci.banks/seriesid=327027/eptitle=dry.bones.that.dream..part.2/brandid=327027/source=catchup/tdur=2743/rstrct=none/chanbrand=itv1/pm=free/us=ano/viewid=0.ffffffff-ffff-ffff-ffff-ffffffffffff/breaknum=0/adpos=last/random=3541600980/]]></URL>
+      </Action>
+    </ContentBreak>
+    <ContentBreak timecode="00:14:27:921">
+      <Action>
+        <URL><![CDATA[http://tom.itv.com/itv/hserver/size=video/area=itvplayer.video/generic=ffffffff-ffff-ffff-ffff-ffffffffffff/rs=scc.true..svisit.1..sc4.other/site=itv/progid=itv.com.327027/proggenre=drama.and.soaps/genre=dra.aa.ha.hw.wa.wo/progname=dci.banks/series=dci.banks/seriesid=327027/eptitle=dry.bones.that.dream..part.2/brandid=327027/source=catchup/tdur=2743/rstrct=none/chanbrand=itv1/pm=free/us=ano/viewid=1.ffffffff-ffff-ffff-ffff-ffffffffffff/breaknum=1/adpos=1/random=8210958580/]]></URL>
+      </Action>
+      <Action>
+        <URL><![CDATA[http://tom.itv.com/itv/hserver/size=video/area=itvplayer.video/generic=ffffffff-ffff-ffff-ffff-ffffffffffff/rs=scc.true..svisit.1..sc4.other/site=itv/progid=itv.com.327027/proggenre=drama.and.soaps/genre=dra.aa.ha.hw.wa.wo/progname=dci.banks/series=dci.banks/seriesid=327027/eptitle=dry.bones.that.dream..part.2/brandid=327027/source=catchup/tdur=2743/rstrct=none/chanbrand=itv1/pm=free/us=ano/viewid=1.ffffffff-ffff-ffff-ffff-ffffffffffff/breaknum=1/adpos=2/random=7094186480/]]></URL>
+      </Action>
+      <Action>
+        <URL><![CDATA[http://tom.itv.com/itv/hserver/size=video/area=itvplayer.video/generic=ffffffff-ffff-ffff-ffff-ffffffffffff/rs=scc.true..svisit.1..sc4.other/site=itv/progid=itv.com.327027/proggenre=drama.and.soaps/genre=dra.aa.ha.hw.wa.wo/progname=dci.banks/series=dci.banks/seriesid=327027/eptitle=dry.bones.that.dream..part.2/brandid=327027/source=catchup/tdur=2743/rstrct=none/chanbrand=itv1/pm=free/us=ano/viewid=1.ffffffff-ffff-ffff-ffff-ffffffffffff/breaknum=1/adpos=3/random=1063173829/]]></URL>
+      </Action>
+      <Action>
+        <URL><![CDATA[http://tom.itv.com/itv/hserver/size=video/area=itvplayer.video/generic=ffffffff-ffff-ffff-ffff-ffffffffffff/rs=scc.true..svisit.1..sc4.other/site=itv/progid=itv.com.327027/proggenre=drama.and.soaps/genre=dra.aa.ha.hw.wa.wo/progname=dci.banks/series=dci.banks/seriesid=327027/eptitle=dry.bones.that.dream..part.2/brandid=327027/source=catchup/tdur=2743/rstrct=none/chanbrand=itv1/pm=free/us=ano/viewid=1.ffffffff-ffff-ffff-ffff-ffffffffffff/breaknum=1/adpos=last/random=2145026518/]]></URL>
+      </Action>
+    </ContentBreak>
+    <ContentBreak timecode="00:26:49:041">
+      <Action>
+        <URL><![CDATA[http://tom.itv.com/itv/hserver/size=video/area=itvplayer.video/generic=ffffffff-ffff-ffff-ffff-ffffffffffff/rs=scc.true..svisit.1..sc4.other/site=itv/progid=itv.com.327027/proggenre=drama.and.soaps/genre=dra.aa.ha.hw.wa.wo/progname=dci.banks/series=dci.banks/seriesid=327027/eptitle=dry.bones.that.dream..part.2/brandid=327027/source=catchup/tdur=2743/rstrct=none/chanbrand=itv1/pm=free/us=ano/viewid=2.ffffffff-ffff-ffff-ffff-ffffffffffff/breaknum=2/adpos=1/random=1617146683/]]></URL>
+      </Action>
+      <Action>
+        <URL><![CDATA[http://tom.itv.com/itv/hserver/size=video/area=itvplayer.video/generic=ffffffff-ffff-ffff-ffff-ffffffffffff/rs=scc.true..svisit.1..sc4.other/site=itv/progid=itv.com.327027/proggenre=drama.and.soaps/genre=dra.aa.ha.hw.wa.wo/progname=dci.banks/series=dci.banks/seriesid=327027/eptitle=dry.bones.that.dream..part.2/brandid=327027/source=catchup/tdur=2743/rstrct=none/chanbrand=itv1/pm=free/us=ano/viewid=2.ffffffff-ffff-ffff-ffff-ffffffffffff/breaknum=2/adpos=2/random=5288799100/]]></URL>
+      </Action>
+      <Action>
+        <URL><![CDATA[http://tom.itv.com/itv/hserver/size=video/area=itvplayer.video/generic=ffffffff-ffff-ffff-ffff-ffffffffffff/rs=scc.true..svisit.1..sc4.other/site=itv/progid=itv.com.327027/proggenre=drama.and.soaps/genre=dra.aa.ha.hw.wa.wo/progname=dci.banks/series=dci.banks/seriesid=327027/eptitle=dry.bones.that.dream..part.2/brandid=327027/source=catchup/tdur=2743/rstrct=none/chanbrand=itv1/pm=free/us=ano/viewid=2.ffffffff-ffff-ffff-ffff-ffffffffffff/breaknum=2/adpos=3/random=1476902390/]]></URL>
+      </Action>
+      <Action>
+        <URL><![CDATA[http://tom.itv.com/itv/hserver/size=video/area=itvplayer.video/generic=ffffffff-ffff-ffff-ffff-ffffffffffff/rs=scc.true..svisit.1..sc4.other/site=itv/progid=itv.com.327027/proggenre=drama.and.soaps/genre=dra.aa.ha.hw.wa.wo/progname=dci.banks/series=dci.banks/seriesid=327027/eptitle=dry.bones.that.dream..part.2/brandid=327027/source=catchup/tdur=2743/rstrct=none/chanbrand=itv1/pm=free/us=ano/viewid=2.ffffffff-ffff-ffff-ffff-ffffffffffff/breaknum=2/adpos=last/random=5235472430/]]></URL>
+      </Action>
+    </ContentBreak>
+    <ContentBreak timecode="00:36:25:681">
+      <Action>
+        <URL><![CDATA[http://tom.itv.com/itv/hserver/size=video/area=itvplayer.video/generic=ffffffff-ffff-ffff-ffff-ffffffffffff/rs=scc.true..svisit.1..sc4.other/site=itv/progid=itv.com.327027/proggenre=drama.and.soaps/genre=dra.aa.ha.hw.wa.wo/progname=dci.banks/series=dci.banks/seriesid=327027/eptitle=dry.bones.that.dream..part.2/brandid=327027/source=catchup/tdur=2743/rstrct=none/chanbrand=itv1/pm=free/us=ano/viewid=3.ffffffff-ffff-ffff-ffff-ffffffffffff/breaknum=3/adpos=1/random=3281218550/]]></URL>
+      </Action>
+      <Action>
+        <URL><![CDATA[http://tom.itv.com/itv/hserver/size=video/area=itvplayer.video/generic=ffffffff-ffff-ffff-ffff-ffffffffffff/rs=scc.true..svisit.1..sc4.other/site=itv/progid=itv.com.327027/proggenre=drama.and.soaps/genre=dra.aa.ha.hw.wa.wo/progname=dci.banks/series=dci.banks/seriesid=327027/eptitle=dry.bones.that.dream..part.2/brandid=327027/source=catchup/tdur=2743/rstrct=none/chanbrand=itv1/pm=free/us=ano/viewid=3.ffffffff-ffff-ffff-ffff-ffffffffffff/breaknum=3/adpos=2/random=1673251513/]]></URL>
+      </Action>
+      <Action>
+        <URL><![CDATA[http://tom.itv.com/itv/hserver/size=video/area=itvplayer.video/generic=ffffffff-ffff-ffff-ffff-ffffffffffff/rs=scc.true..svisit.1..sc4.other/site=itv/progid=itv.com.327027/proggenre=drama.and.soaps/genre=dra.aa.ha.hw.wa.wo/progname=dci.banks/series=dci.banks/seriesid=327027/eptitle=dry.bones.that.dream..part.2/brandid=327027/source=catchup/tdur=2743/rstrct=none/chanbrand=itv1/pm=free/us=ano/viewid=3.ffffffff-ffff-ffff-ffff-ffffffffffff/breaknum=3/adpos=3/random=1740771792/]]></URL>
+      </Action>
+      <Action>
+        <URL><![CDATA[http://tom.itv.com/itv/hserver/size=video/area=itvplayer.video/generic=ffffffff-ffff-ffff-ffff-ffffffffffff/rs=scc.true..svisit.1..sc4.other/site=itv/progid=itv.com.327027/proggenre=drama.and.soaps/genre=dra.aa.ha.hw.wa.wo/progname=dci.banks/series=dci.banks/seriesid=327027/eptitle=dry.bones.that.dream..part.2/brandid=327027/source=catchup/tdur=2743/rstrct=none/chanbrand=itv1/pm=free/us=ano/viewid=3.ffffffff-ffff-ffff-ffff-ffffffffffff/breaknum=3/adpos=last/random=4705963650/]]></URL>
+      </Action>
+    </ContentBreak>
+    <ContentBreak timecode="00:45:43:160">
+      <Action>
+        <URL><![CDATA[http://tom.itv.com/itv/hserver/size=video/area=itvplayer.video/generic=ffffffff-ffff-ffff-ffff-ffffffffffff/rs=scc.true..svisit.1..sc4.other/site=itv/progid=itv.com.327027/proggenre=drama.and.soaps/genre=dra.aa.ha.hw.wa.wo/progname=dci.banks/series=dci.banks/seriesid=327027/eptitle=dry.bones.that.dream..part.2/brandid=327027/source=catchup/tdur=2743/rstrct=none/chanbrand=itv1/pm=free/us=ano/viewid=end.ffffffff-ffff-ffff-ffff-ffffffffffff/breaknum=end/adpos=last/random=1767214639/]]></URL>
+      </Action>
+    </ContentBreak>
+  </ContentBreaks>
+  <Notifications>
+    <Notification timecode="00:00:00:200">
+      <Tracking event="Time">
+        <URL><![CDATA[javascript:Omniture_Play("crid://itv.com/327027", "ffffffff-ffff-ffff-ffff-ffffffffffff", "DCI Banks");]]></URL>
+      </Tracking>
+    </Notification>
+    <Notification timecode="00:00:00:200">
+      <Tracking event="Time">
+        <URL><![CDATA[http://mercury.itv.com/ContentTrackingCall.aspx?vodcrid=crid://itv.com/327027&guid=ffffffff-ffff-ffff-ffff-ffffffffffff&part=1&client=ItvCom]]></URL>
+      </Tracking>
+    </Notification>
+    <Notification timecode="00:14:28:121">
+      <Tracking event="Time">
+        <URL><![CDATA[http://mercury.itv.com/ContentTrackingCall.aspx?vodcrid=crid://itv.com/327027&guid=ffffffff-ffff-ffff-ffff-ffffffffffff&part=2&client=ItvCom]]></URL>
+      </Tracking>
+    </Notification>
+    <Notification timecode="00:26:49:241">
+      <Tracking event="Time">
+        <URL><![CDATA[http://mercury.itv.com/ContentTrackingCall.aspx?vodcrid=crid://itv.com/327027&guid=ffffffff-ffff-ffff-ffff-ffffffffffff&part=3&client=ItvCom]]></URL>
+      </Tracking>
+    </Notification>
+    <Notification timecode="00:36:25:881">
+      <Tracking event="Time">
+        <URL><![CDATA[http://mercury.itv.com/ContentTrackingCall.aspx?vodcrid=crid://itv.com/327027&guid=ffffffff-ffff-ffff-ffff-ffffffffffff&part=4&client=ItvCom]]></URL>
+      </Tracking>
+    </Notification>
+  </Notifications>
+  <TrackingEvents>
+    <Tracking event="PlaylistLoaded"/>
+    <Tracking event="AttemptPlay">
+      <URL><![CDATA[javascript:CallBehaviourModulePlayer("crid://itv.com/327027", "Video");]]></URL>
+      <URL><![CDATA[http://mercury.itv.com/ContentTrackingCall.aspx?vodcrid=crid://itv.com/327027&guid=ffffffff-ffff-ffff-ffff-ffffffffffff&part=0&client=ItvCom]]></URL>
+    </Tracking>
+    <Tracking event="Pause"/>
+    <Tracking event="Resume"/>
+    <Tracking event="EnterFullscreen"/>
+    <Tracking event="ExitFullscreeen"/>
+    <Tracking event="Seek"/>
+    <Tracking event="ErrorOccured"/>
+  </TrackingEvents>
+</Playlist></GetPlaylistResult></GetPlaylistResponse></s:Body></s:Envelope>
+INFO: Metadata Response received
+DEBUG: Metadata Processed: seriesName=DCI Banks dateString=31 October 2012 episodeName=Dry Bones That Dream (Part 2) episodeNumber=4 thumbnailURL=http://mercury.itv.com/DotCom/episode/327027/image.jpg?w=480&h=272 subtitleURL=http://subtitles.secure.content.itv.com/CATCHUP/b2580098/74cb/4128/a53a/e13fb458dded/1-9089-0012-002_DCIBanks-Aftermath_TX311012.xml?__gda__=1351739938_daf2b652777d76a62ee571086754f84a&fileExt=.xml authURL=rtmpe://cp72511.edgefcs.net/ondemand?auth=eaEd7dEd8axdXaKbsb0cidRa_bSdYd7anbLdlcBaqbqcLcXb3d1bla2d_aScRbNd4bW-bqKC4w-eS-dAm4CAqmErCq&aifp=v002&slist=production/
+DEBUG: Secondary Metadata Response: <div class="itvCatchUpPlayerPanel" xmlns:ms="urn:schemas-microsoft-com:xslt">
+
+  <div class="cu-sponsor"><a href="http://sam.itv.com/accipiter/adclick/CID=000040d70000000000000000/acc_random=1/SITE=CLICKTRACK/AREAITVCATCHUP.VIDEO=CLICKTRACK..FREEVIEW.SPONSORBUTTON.OCT08/AAMSZ=120X60/pageid=1" title="ITV Player in assocation with Freeview"><img src="/_app/img/catchup/catchup_video_freeview2.jpg" alt="ITV Player is sponsored by Freeview"></a></div>
+
+  <h2>DCI Banks</h2>
+
+  <p>With Pamela Jeffries in a coma, Banks is even more determined to find Rothwell's killer. And against orders he decides to question MP Martin Fleming.</p>
+
+  <p class="timings"><span class="date">Wed 31 Oct 2012</span><br /><br /><span>
+
+				
+
+        Duration: 45 min | 
+
+				Expires in
+
+				<strong>29</strong>
+
+						days
+
+					</span></p>
+
+  <p><a href="http://www.itv.com/ITVPlayer/Programmes/default.html?ViewType=1&amp;Filter=3901">8 Episodes Available
+
+        </a><br></br></p>
+
+  <p class="channelLogo"><img src="/_app/img/logos/itv1-black.gif" alt="ITV 2"></p>
+
+  <div class="guidance">
+
+    <div><strong>ITV Video Guidance</strong><p>Contains some scenes of violence.                                                                                                                                                                                                                              </p>
+
+    </div>
+
+  </div>
+
+  <div id="cu-2-0-VideoID">327027</div>
+
+  <div id="cu-2-0-DentonId">20</div>
+
+  <div id="cu-2-0-ItemMediaUrl">http://www.itv.com/img/480x272/DCI-Banks-5725dff7-22d1-47d6-ba6e-7f471ec3142b.jpg</div>
+
+</div><script language="javascript" type="text/javascript" xmlns:ms="urn:schemas-microsoft-com:xslt">
+			SetCatchUpModuleID(0);
+		</script>
+INFO: Secondary Metadata Response received
+DEBUG: Secondary Metadata Processed: showname=DCI Banks - Dry Bones That Dream (Part 2) temp_showname=DCI Banks epname=Dry Bones That Dream (Part 2) epnum=<NSConcreteScanner: 0x4004e2a00> description=With Pamela Jeffries in a coma, Banks is even more determined to find Rothwell's killer. And against orders he decides to question MP Martin Fleming.
+DEBUG: Retrieving Playpath
+DEBUG: Parsing MediaFile entries
+DEBUG: ITVMediaFileEntry: bitrate=400000 itvRate=400 url=mp4:production/priority/rtmpecatchup/400/9B/1-9089-0012-002/1-9089-0012-002_dci-banks-(series-2)_tx311012_itv400_16x9-reg.mp4
+DEBUG: ITVMediaFileEntry: bitrate=600000 itvRate=600 url=mp4:production/priority/rtmpecatchup/600/9B/1-9089-0012-002/1-9089-0012-002_dci-banks-(series-2)_tx311012_itv600_16x9-reg.mp4
+DEBUG: ITVMediaFileEntry: bitrate=800000 itvRate=800 url=mp4:production/priority/rtmpecatchup/800/9B/1-9089-0012-002/1-9089-0012-002_dci-banks-(series-2)_tx311012_itv800_16x9-reg.mp4
+DEBUG: ITVMediaFileEntry: bitrate=1200000 itvRate=1200 url=mp4:production/priority/rtmpecatchup/1200/9B/1-9089-0012-002/1-9089-0012-002_dci-banks-(series-2)_tx311012_itv1200_16x9-reg.mp4
+DEBUG: ITVMediaFileEntry: bitrate=1200000 itvRate=1200 url=mp4:production/priority/rtmpecatchup/1200/9B/1-9089-0012-002/1-9089-0012-002_dci-banks-(series-2)_tx311012_itv1200_16x9-reg.mp4
+DEBUG: Searching for itvRate match
+DEBUG: foundIt (itvRate): rate=1200 url=mp4:production/priority/rtmpecatchup/1200/9B/1-9089-0012-002/1-9089-0012-002_dci-banks-(series-2)_tx311012_itv1200_16x9-reg.mp4
+DEBUG: Searching for bitrate match
+DEBUG: playPath = mp4:production/priority/rtmpecatchup/1200/9B/1-9089-0012-002/1-9089-0012-002_dci-banks-(series-2)_tx311012_itv1200_16x9-reg.mp4
+INFO: Program data processed.
+DEBUG: rtmpdump args: (
+    "-rrtmpe://cp72511.edgefcs.net/ondemand?auth=eaEd7dEd8axdXaKbsb0cidRa_bSdYd7anbLdlcBaqbqcLcXb3d1bla2d_aScRbNd4bW-bqKC4w-eS-dAm4CAqmErCq&aifp=v002&slist=production/",
+    "-Whttp://www.itv.com/mediaplayer/ITVMediaPlayer.swf?v=11.20.654",
+    "-ymp4:production/priority/rtmpecatchup/1200/9B/1-9089-0012-002/1-9089-0012-002_dci-banks-(series-2)_tx311012_itv1200_16x9-reg.mp4",
+    "-o/Users/john/tv/DCI Banks/DCI Banks - Dry Bones That Dream (Part 2).partial.flv"
+)
+INFO: Launching RTMPDUMP...
+RTMPDump 2.4
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+Connecting ...
+WARNING: HandShake: Type mismatch: client sent 6, server answered 9
+INFO: Connected...
+Starting download at: 0.000 kB
+INFO: Metadata:
+INFO:   duration              2743.21
+INFO:   moovPosition          32.00
+INFO:   width                 704.00
+INFO:   height                396.00
+INFO:   videocodecid          avc1
+INFO:   audiocodecid          mp4a
+INFO:   avcprofile            77.00
+INFO:   avclevel              31.00
+INFO:   aacaot                2.00
+INFO:   videoframerate        25.00
+INFO:   audiosamplerate       24000.00
+INFO:   audiochannels         2.00
+INFO: trackinfo:
+INFO:   length                68578000.00
+INFO:   timescale             25000.00
+INFO:   language              eng
+INFO: sampledescription:
+INFO:   sampletype            avc1
+INFO:   length                65837056.00
+INFO:   timescale             24000.00
+INFO:   language              eng
+INFO: sampledescription:
+INFO:   sampletype            mp4a

@@ -1,0 +1,90 @@
+Get iPlayer Automator Initialized.
+
+AppController: Installing/Updating Get_iPlayer Plugins...
+Updating Program Index Feeds from Server...
+AppController: Index was Up-To-Date.
+
+AppController: Starting Downloads
+
+Downloading Show 1/1:
+
+ITV Download (ID=100072): Downloading Coronation Street - Fri 28 Sep 2012
+INFO: Preparing Request for Auth Info
+INFO: Using proxy 146.255.9.124:3128
+INFO: Requesting Auth.
+INFO: Response received
+INFO: Program data processed.
+INFO: Launching RTMPDUMP...
+Command is /usr/local/bin/rtmpdump-2.4 -rrtmpe://cp72511.edgefcs.net/ondemand?auth=eaEa1djbxakcacYahdpdKaQdidpcrchcraFahbnaWbecUd7byaOc6cabhcydWbCbmco-bqIzBC-eS-7Av2FAnlvtwp&aifp=v002&slist=production/ -Whttp://www.itv.com/mediaplayer/ITVMediaPlayer.swf?v=11.20.654 -ymp4:production/priority/rtmpecatchup/1200/56/1-0694-7965-001/1-0694-7965-001_coronation-street-(series-53)-2012_tx280912_itv1200_16x9-reg.mp4 -o/Users/john/tv/Coronation Street/Coronation Street - 28-09-2012 - Episode 196.partial.flv
+ITV Download (ID=100072): RTMPDUMP finished
+INFO: Converting FLV File to MP4
+FFmpeg version git-44002d8, Copyright (c) 2000-2011 the FFmpeg developers
+  built on Jan 25 2011 21:13:27 with gcc 4.2.1 (Apple Inc. build 5664)
+  configuration: --prefix=/Volumes/Ramdisk/sw --enable-gpl --enable-pthreads --enable-version3 --enable-nonfree --enable-libspeex --enable-libvpx --disable-decoder=libvpx --enable-libfaac --enable-libmp3lame --enable-libtheora --enable-libvorbis --enable-libx264 --enable-avfilter --enable-libopencore_amrwb --enable-libopencore_amrnb --enable-filters --arch=x86 --enable-runtime-cpudetect
+INFO: Finished Converting.
+INFO: Exit Code = 1
+
+AppController: Downloads Finished
+
+-=====================
+
+Get iPlayer Automator Initialized.
+
+AppController: Installing/Updating Get_iPlayer Plugins...
+Updating Program Index Feeds from Server...
+AppController: Index was Up-To-Date.
+
+AppController: Starting Downloads
+
+Downloading Show 1/1:
+
+ITV Download (ID=100072): Downloading Coronation Street - Fri 28 Sep 2012
+INFO: Preparing Request for Auth Info
+INFO: Using proxy 146.255.9.124:3128
+INFO: Requesting Auth.
+INFO: Response received
+INFO: Program data processed.
+INFO: Launching RTMPDUMP...
+
+Command is /usr/local/bin/rtmpdump-2.4 
+-rrtmpe://cp72511.edgefcs.net
+/ondemand?auth=eaEa1djbxakcacYahdpdKaQdidpcrchcraFahbnaWbecUd7byaOc6cabhcydWbCbmco-bqIzBC-eS-7Av2FAnlvtwp&aifp=v002&slist=production/ 
+-Whttp://www.itv.com/mediaplayer/ITVMediaPlayer.swf?v=11.20.654 
+-ymp4:production/priority/rtmpecatchup/1200/56/1-0694-7965-001/1-0694-7965-001_coronation-street-(series-53)-2012_tx280912_itv1200_16x9-reg.mp4 
+-o/Users/john/tv/Coronation Street/Coronation Street - 28-09-2012 - Episode 196.partial.flv
+
+ITV Download (ID=100072): RTMPDUMP finished
+INFO: Converting FLV File to MP4
+FFmpeg version git-44002d8, Copyright (c) 2000-2011 the FFmpeg developers
+  built on Jan 25 2011 21:13:27 with gcc 4.2.1 (Apple Inc. build 5664)
+  configuration: --prefix=/Volumes/Ramdisk/sw --enable-gpl --enable-pthreads --enable-version3 --enable-nonfree --enable-libspeex --enable-libvpx --disable-decoder=libvpx --enable-libfaac --enable-libmp3lame --enable-libtheora --enable-libvorbis --enable-libx264 --enable-avfilter --enable-libopencore_amrwb --enable-libopencore_amrnb --enable-filters --arch=x86 --enable-runtime-cpudetect
+INFO: Finished Converting.
+INFO: Exit Code = 1
+
+AppController: Downloads Finished
+
+AppController: Starting Downloads
+
+Downloading Show 1/1:
+
+ITV Download (ID=100074): Downloading Coronation Street - Wed 26 Sep 2012
+INFO: Preparing Request for Auth Info
+INFO: Using proxy 146.255.9.124:3128
+INFO: Requesting Auth.
+INFO: Response received
+INFO: Program data processed.
+INFO: Launching RTMPDUMP...
+Command is /usr/local/bin/rtmpdump-2.4 -rrtmpe://cp72511.edgefcs.net
+/ondemand?auth=eaEcgcCdjapbba6bBcidMcXchd0dabMaGbwa3dZbOcybQaCa6cva4cAcCdiaHbOd.bk-bqIzIq-eS-azu4LAskwrEq&aifp=v002&slist=production/ 
+-Whttp://www.itv.com/mediaplayer/ITVMediaPlayer.swf?v=11.20.654 
+-ymp4:production/priority/rtmpecatchup/1200/F0/1-0694-7963-001/1-0694-7963-001_coronation-street-(series-53)-2012_tx260912_itv1200_16x9-reg.mp4 
+-o/Users/john/tv/Coronation Street/Coronation Street - 26-09-2012 - Episode 194.partial.flv
+ITV Download (ID=100074): RTMPDUMP finished
+INFO: Converting FLV File to MP4
+FFmpeg version git-44002d8, Copyright (c) 2000-2011 the FFmpeg developers
+  built on Jan 25 2011 21:13:27 with gcc 4.2.1 (Apple Inc. build 5664)
+  configuration: --prefix=/Volumes/Ramdisk/sw --enable-gpl --enable-pthreads --enable-version3 --enable-nonfree --enable-libspeex --enable-libvpx --disable-decoder=libvpx --enable-libfaac --enable-libmp3lame --enable-libtheora --enable-libvorbis --enable-libx264 --enable-avfilter --enable-libopencore_amrwb --enable-libopencore_amrnb --enable-filters --arch=x86 --enable-runtime-cpudetect
+INFO: Finished Converting.
+INFO: Exit Code = 1
+
+AppController: Downloads Finished

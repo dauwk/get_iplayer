@@ -312,6 +312,8 @@ $opt->{quiet} = 1 if $opt_pre->{quiet};
 $opt->{pvr} = 1 if $opt_pre->{pvr};
 $opt->{stdout} = 1 if $opt_pre->{stdout} || $opt_pre->{stream};
 
+logger "INFOJO: Starting in Debug\n";
+
 # show version and exit
 if ( $opt_pre->{showver} ) {
 	print STDERR Options->copyright_notice;
@@ -4135,7 +4137,7 @@ sub download_retry_loop {
 	# Do this for each version tried in this order (if they appeared in the content)
 	for my $version ( @version_search_list ) {
 		my $retcode = 1;
-		main::logger "DEBUG: Trying version '$version'\n" if $opt->{debug};
+		main::logger "DEBUG: Trying version '$version'\n" if $opt->{verbose};
 		if ( $prog->{verpids}->{$version} ) {
 			main::logger "INFO: Checking existence of $version version\n";
 			$prog->{version} = $version;
@@ -4143,6 +4145,8 @@ sub download_retry_loop {
 
 			# Try to get stream data for this version if not already populated
 			if ( not defined $prog->{streams}->{$version} ) {
+				main::logger "DEBUG: Trying to get stream data '$version'\n" if $opt->{verbose};
+
 				$prog->{streams}->{$version} = $prog->get_stream_data( $prog->{verpids}->{$version} );
 			}
 
@@ -4884,7 +4888,7 @@ use POSIX qw(mkfifo);
 use strict;
 use Time::Local;
 use URI;
-
+print "Starting";
 # Inherit from Programme class
 use base 'Programme';
 
